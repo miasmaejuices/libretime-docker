@@ -12,7 +12,6 @@ COPY pkgs_list.apt /pkgs_list.apt
 RUN apt-get update && apt-get install --no-install-recommends -y apt-utils && \
       apt-get install --no-install-recommends -y $(cat /pkgs_list.apt)
 
-
 RUN mkdir /src && cd /src && \
       url="https://github.com/LibreTime/libretime/archive/$LIBRE_V.tar.gz" && \
       file=$(curl $url | sed 's/.* href="//' | sed 's/">.*//') && \
