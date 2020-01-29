@@ -54,6 +54,6 @@ WORKDIR /
 VOLUME ["/etc/airtime", "/var/lib/postgresql/10/main", "/srv/airtime/stor", \
   "/srv/airtime/watch", "/usr/local/lib/python2.7/dist-packages/airtime_playout-1.0-py2.7.egg/liquidsoap/"]
 
-EXPOSE 80 8000
+EXPOSE 80 8000 8001 8002
 
 CMD /start.sh && exec /usr/bin/systemctl
