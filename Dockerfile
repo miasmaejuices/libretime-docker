@@ -29,9 +29,6 @@ RUN mkdir /src && cd /src && \
 
 WORKDIR "/src" 
 
-RUN locale-gen --purge en_US.UTF-8 && \
-      update-locale LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-
 COPY systemctl.py /usr/bin/systemctl
 
 RUN test -L /bin/systemctl || ln -sf /usr/bin/systemctl /bin/systemctl
